@@ -1,0 +1,26 @@
+<html lang="en">
+    <head>
+        <title>Javascript Tests</title>
+
+        <link rel="stylesheet" href="js/libs/jasmine.css">
+
+        <script src="js/libs/jasmine.js"></script>
+        <script src="js/libs/jasmine-html.js"></script>
+        <script src="../../main/webapp/js/libs/jquery-1.9.1.js"></script>
+        <script data-main="SpecRunner" src="../../main/webapp/js/libs/require.js"></script>
+
+        <script>
+            require({ paths: { spec: "test/spec" } }, [
+                    // Pull in all your modules containing unit tests here.
+                    "test/spec/studentspec"
+                ], function () {
+                    jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
+                    jasmine.getEnv().execute();
+                });
+        </script>
+
+    </head>
+
+<body>
+</body>
+</html>
